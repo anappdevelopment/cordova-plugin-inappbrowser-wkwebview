@@ -439,7 +439,7 @@
     BOOL isTopLevelNavigation = [request.URL isEqual:[request mainDocumentURL]];
     
     //if is an app store link, let the system handle it, otherwise it fails to load it
-    if ([[ url scheme] isEqualToString:@"itms-appss"] || [[ url scheme] isEqualToString:@"itms-apps"]) {
+    if ([[ url scheme] isEqualToString:@"itms-appss"] || [[ url scheme] isEqualToString:@"itms-apps"] || [[ url scheme] isEqualToString:@"an"]) {
         [theWebView stopLoading];
         [self openInSystem:url];
         return NO;
